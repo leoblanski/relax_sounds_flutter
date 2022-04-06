@@ -6,19 +6,25 @@ class BaseWidget extends StatelessWidget {
   final String title;
   final Widget body;
   final AppBar? appbar;
+  final Color? backgroundColor;
 
   const BaseWidget({
     required this.title,
     required this.body,
     this.appbar,
+    this.backgroundColor,
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: backgroundColor ?? appColorTheme,
       appBar: appbar ?? _getAppBar(),
-      body: body,
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        child: body,
+      ),
     );
   }
 

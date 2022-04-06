@@ -13,9 +13,17 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return BaseWidget(
-      title: "${getTitleByHour()} !",
-      body: Container(
-        child: Text("First page"),
+      title: "", //"${getTitleByHour()} !",
+      body: Column(
+        children: [
+          Text(
+            "${getTitleByHour()} !",
+            style: TextStyle(color: Colors.white),
+          ),
+          Container(
+            child: Text("First page"),
+          ),
+        ],
       ),
     );
   }
