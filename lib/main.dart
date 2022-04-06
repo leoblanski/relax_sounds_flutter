@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:relax_sounds/base_widget.dart';
 import 'package:relax_sounds/home_page.dart';
 
 void main() {
@@ -12,14 +11,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Relax Sounds',
+      //title: 'Relax Sounds',
       theme: ThemeData(
-        primaryColor: Colors.white,
+        primaryColor: Colors.green,
       ),
-      home: BaseWidget(
-        title: 'Flutter Demo Home Page',
-        body: HomePage(),
-      ),
+      home: const HomePage(),
     );
   }
 }
